@@ -1,0 +1,14 @@
+.Navbar {
+  background-color: grey;
+  .btn {
+    background-color: #5e35b1 ;
+  }
+  label {
+    cursor: pointer;
+    color: white;
+  }
+  input {
+    visibility: hidden;
+    display: none;
+  }
+}

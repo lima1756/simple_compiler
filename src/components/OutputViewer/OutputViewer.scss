@@ -1,0 +1,27 @@
+.OutputViewer {
+  display:flex;
+}
+
+.row.OutputViewer, .row .row {
+  margin:0;
+  height:100%;
+}
+
+.OutputViewer > .col {
+  display: flex;
+  flex-direction: column;
+  .row {
+    display: flex;
+    flex: 1;
+    flex-direction:column;
+    overflow: auto;
+    .col.active {
+      flex:1;
+    }
+  }
+}
+
+.OutputViewer .col .col {
+  text-align: left;
+  overflow-y: auto;
+}
