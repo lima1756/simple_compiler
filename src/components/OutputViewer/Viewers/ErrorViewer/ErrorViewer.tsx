@@ -24,7 +24,14 @@ function ErrorViewer(props: ErrorViewerProps) {
           </p>
         </CollectionItem>
       ))}
-    </Collection>
+      {props.errorTable.length == 0 && (
+        <CollectionItem >
+          <span className="title">
+            <b>No errors!</b>
+          </span>
+        </CollectionItem>
+      )}
+    </Collection >
   )
 }
 
