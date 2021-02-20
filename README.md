@@ -42,30 +42,30 @@ fb ia a=5 b=a+3.2 pb
 
 This is the main view of the site:
 
-![Main view](1.png)
+![Main view](https://github.com/lima1756/simple_compiler/blob/main/readme_images/1.png)
 
 The left panel is the code to enter, you can modify it directly on browser, it will highlight the syntax.
 
 After you're happy with your code, just press the refresh button on the top right corner:
 
-![Refresh button](2.png)
+![Refresh button](https://github.com/lima1756/simple_compiler/blob/main/readme_images/2.png)
 
 If everything is okay with the code, it should show no errors and enable the AST JSON and AST VIEWER tabs:
 
-![No errors](4.png)
+![No errors](https://github.com/lima1756/simple_compiler/blob/main/readme_images/4.png)
 
 In the AST JSON tab, you can see the created json after the Parser that is used in the next tab to represent it visually:
 
-![AST JSON](5.png)
+![AST JSON](https://github.com/lima1756/simple_compiler/blob/main/readme_images/5.png)
 
 In the AST VIEWER tab, you can see the tree in a graphical way, you can drag around the canvas and zoom in and out.
 
-![AST VIEWER](6.png)
+![AST VIEWER](https://github.com/lima1756/simple_compiler/blob/main/readme_images/6.png)
 
 In case there are any errors on you code then it will show them on the errors tab and disable the other two tabs.
 
-![Errors](7.png)
+![Errors](https://github.com/lima1756/simple_compiler/blob/main/readme_images/7.png)
 
 If you want to upload a file instead of writing it into the text editor, then just click the button next to the refresh one and select the file!
 
-![File upload](3.png)
+![File upload](https://github.com/lima1756/simple_compiler/blob/main/readme_images/3.png)
