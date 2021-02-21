@@ -29,8 +29,8 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 |Dcls|  ->| Dcl Dcls \| λ
 |Dcl|   ->| floatdcl id \| intdcl id
 |Stmts| ->| Stmt Stmts \| λ
-|Stmt| -> | id assign Val Expr \| print id
-|Expr| -> | plus Val Expr \| minus Val Expr \| λ
+|Stmt| -> | id assign Expr \| print id
+|Expr| -> | Val \| Val plus Expr \| Val minus Expr
 |Val| -> | id \| num \| fnum
 
 ## Example code input:

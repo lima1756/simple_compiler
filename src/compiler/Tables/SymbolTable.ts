@@ -1,31 +1,36 @@
-import Token from '../Token/Token';
-
+enum SymbolType {
+  float, int
+}
 class Symbol {
   name: string
-  token: Token
-  value: any
+  type: SymbolType
+  declaration: { start: number, line: number }
 
-  constructor(name: string, token: Token, value: any) {
+  constructor(name: string, type: SymbolType, declaration: { start: number, line: number }) {
     this.name = name;
-    this.token = token;
-    this.value = value;
+    this.type = type;
+    this.declaration = declaration;
   }
 }
 
 class SymbolTable {
   data: { [key: string]: Symbol } = {}
+  length: number = 0;
 
-  setValue(key: string, value: Symbol) {
+  addValue(key: string, value: Symbol) {
     this.data[key] = value;
+    this.length += 1
   }
 
-  set(name: string, token: Token, value: any) {
-    this.data[name] = new Symbol(name, token, value);
+  add(name: string, type: SymbolType, declaration: { start: number, line: number }) {
+    this.data[name] = new Symbol(name, type, declaration);
+    this.length += 1
   }
 
-  get(key: string) {
+  get(key: string): Symbol | null {
     return this.data[key];
   }
 }
 
+export { SymbolType, Symbol };
 export default SymbolTable;

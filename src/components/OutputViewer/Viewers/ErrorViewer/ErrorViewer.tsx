@@ -11,7 +11,7 @@ function ErrorViewer(props: ErrorViewerProps) {
   return (
     <Collection>
       {props.errorTable.errors.map(error => (
-        <CollectionItem>
+        <CollectionItem key={error.message}>
           <span className="title">
             <b>{error.message}</b>
           </span>

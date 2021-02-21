@@ -9,7 +9,6 @@ test('parses no errors', () => {
   const scanner = new Scanner("fbiaa=5b=a-3.2b=5pb", symbolTable, errorTable);
   const output = scanner.run()
   const parser = new Parser(output, symbolTable, errorTable);
-  parser.run();
   expect(errorTable.length).toBe(0);
 });
 
@@ -19,8 +18,7 @@ test('parses no error (no decls)', () => {
   const scanner = new Scanner("a=5b=a+3.2pb", symbolTable, errorTable);
   const output = scanner.run()
   const parser = new Parser(output, symbolTable, errorTable);
-  parser.run();
-  expect(errorTable.length).toBe(0);
+  expect(errorTable.length).toBe(2);
 });
 
 test('parses 1 error expecting stmt but gots eof', () => {
@@ -29,6 +27,5 @@ test('parses 1 error expecting stmt but gots eof', () => {
   const scanner = new Scanner("a=5b=a+3.2b", symbolTable, errorTable);
   const output = scanner.run()
   const parser = new Parser(output, symbolTable, errorTable);
-  parser.run();
-  expect(errorTable.length).toBe(1);
+  expect(errorTable.length).toBe(3);
 });

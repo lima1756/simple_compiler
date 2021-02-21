@@ -1,9 +1,10 @@
 import React from 'react';
 import * as d3 from 'd3';
-import "./AstViewer.scss";
+import "./TreeViewer.scss";
 
-interface AstViwerProps {
-  ast: string;
+interface TreeViewerProps {
+  tree: any;
+  rate: number;
 }
 
 let last = { k: 1, x: 0, y: 40 }
@@ -30,21 +31,19 @@ const drag_handler = d3.drag()
 
 const zoom_handler = d3.zoom()
   .on("zoom", function ({ transform }) {
-    console.log(last)
     last.k = transform.k;
     d3.select(this)
       .attr("transform",
         "translate(" + last.x + "," + last.y + ") scale(" + last.k + ")");
-    console.log(last)
   })
 
-function AstViewer(props: AstViwerProps) {
+function TreeViewer(props: TreeViewerProps) {
   const refDiv = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     last = { k: 1, x: 0, y: 40 }
     const margin = { top: 40, right: 0, bottom: 0, left: 0 };
-    const nodeData = d3.hierarchy(props.ast)
-    const size = { x: nodeData.height * 150, y: nodeData.height * 100 };
+    const nodeData = d3.hierarchy(props.tree)
+    const size = { x: nodeData.height * props.rate, y: nodeData.height * props.rate / 1.8 };
     const treemap = d3.tree().size([size.x, size.y])
     const nodes = treemap(nodeData);
     if (refDiv.current != null) {
@@ -84,7 +83,7 @@ function AstViewer(props: AstViwerProps) {
 
       // adds the circle to the node
       node.append("circle")
-        .attr("r", 10);
+        .attr("r", 12);
 
       // adds the text to the node
       node.append("text")
@@ -108,4 +107,4 @@ function AstViewer(props: AstViwerProps) {
 
 }
 
-export default AstViewer
+export default TreeViewer
