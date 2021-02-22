@@ -42,42 +42,42 @@ fb ia a=5 b=a+3.2 pb
 
 This is the main view of the site:
 
-![Main view]()
+![Main view](https://github.com/lima1756/simple_compiler/blob/main/readme_images/main.png)
 
 The left panel is the code to enter, you can modify it directly on browser, it will highlight the syntax.
 
 After you're happy with your code, just press the refresh button on the top right corner:
 
-![Refresh button]()
+![Refresh button](https://github.com/lima1756/simple_compiler/blob/main/readme_images/refresh.png)
 
 If everything is okay with the code, it should show no errors and enable Tabs in the right side of the page (If your screen is to small it will show a scrollbar to select hidden tabs):
 
-![No errors]()
+![No errors](https://github.com/lima1756/simple_compiler/blob/main/readme_images/no_errors.png)
 
 In the SYMBOL TABLE tab you can view the detected variables that were declared in your code, and the location of its declaration.
 
-![SYMBOL TABLE tab]()
+![SYMBOL TABLE tab](https://github.com/lima1756/simple_compiler/blob/main/readme_images/symbol.png)
 
 In the PARSE TREE JSON tab, you can see the created json after the Syntax Analyzer that is used in the next tab to represent it visually:
 
-![PARSE TREE JSON]()
+![PARSE TREE JSON](https://github.com/lima1756/simple_compiler/blob/main/readme_images/parsejson.png)
 
 In the PARSE TREE VIEWER tab, you can see the tree in a graphical way, you can drag around the canvas and zoom in and out.
 
-![PARSE TREE VIEWER]()
+![PARSE TREE VIEWER](https://github.com/lima1756/simple_compiler/blob/main/readme_images/parseview.png)
 
 In the AST JSON tab, you can see the created json after the Semantic Analyzer that is used in the next tab to represent it visually:
 
-![PARSE TREE JSON]()
+![PARSE TREE JSON](https://github.com/lima1756/simple_compiler/blob/main/readme_images/astjson.png)
 
 In the AST VIEWER tab, you can see the tree in a graphical way, you can drag around the canvas and zoom in and out.
 
-![PARSE TREE VIEWER]()
+![PARSE TREE VIEWER](https://github.com/lima1756/simple_compiler/blob/main/readme_images/astview.png)
 
 In case there are any errors on you code then it will show them on the errors tab and disable the other two tabs.
 
-![Errors]()
+![Errors](https://github.com/lima1756/simple_compiler/blob/main/readme_images/error.png)
 
 If you want to upload a file instead of writing it into the text editor, then just click the button next to the refresh one and select the file!
 
-![File upload]()
+![File upload](https://github.com/lima1756/simple_compiler/blob/main/readme_images/upload.png)
