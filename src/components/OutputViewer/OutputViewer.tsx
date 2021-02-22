@@ -5,6 +5,7 @@ import TreeViewer from './Viewers/TreeViewer/TreeViewer';
 import ErrorViewer from './Viewers/ErrorViewer/ErrorViewer';
 import SymbolTableViewer from './Viewers/SymbolTableViewer/SymbolTableViewer';
 import Compiler from '../../compiler/Compiler';
+import Instructions from './Viewers/Instructions/Instructions'
 
 interface OutputViewerProps {
   compiler: Compiler
@@ -22,11 +23,15 @@ function OutputViewer(props: OutputViewerProps) {
   const display = errorTable != null && symbolTable != null;
   if (display) {
     const errors = errorTable!.length != 0;
+    console.log("asdfasfd")
     return (
       <div className="row OutputViewer" >
         <div className="col s12" style={{ padding: 0, margin: 0 }}>
           <Tabs options={tabsOptions}>
-            <Tab title="Error/warnings">
+            <Tab title="Instructions">
+              <Instructions />
+            </Tab>
+            <Tab title="Error/warnings" active={errors}>
               <ErrorViewer errorTable={errorTable!} />
             </Tab>
             <Tab title="Symbol table" disabled={errors}>
@@ -35,13 +40,13 @@ function OutputViewer(props: OutputViewerProps) {
             <Tab title="Parse Tree JSON" disabled={errors}>
               {!errors && <pre>{prettyObject(parseTree)}</pre>}
             </Tab>
-            <Tab title="Parse Tree Viewer" disabled={errors} idx="asdf">
+            <Tab title="Parse Tree Viewer" disabled={errors}>
               {!errors && <TreeViewer tree={parseTree} rate={150} />}
             </Tab>
             <Tab title="AST JSON" disabled={errors}>
               {!errors && <pre>{prettyObject(ast)}</pre>}
             </Tab>
-            <Tab title="AST Viewer" disabled={errors} idx="asdf">
+            <Tab title="AST Viewer" disabled={errors} >
               {!errors && <TreeViewer tree={ast} rate={200} />}
             </Tab>
           </Tabs>
@@ -56,7 +61,7 @@ function OutputViewer(props: OutputViewerProps) {
         <Tabs options={tabsOptions}>
           <Tab title="Instructions">
             Code to the left, execute on the top, output in this tabs
-      </Tab>
+          </Tab>
         </Tabs>
       </div>
     </div>)

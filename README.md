@@ -8,8 +8,6 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 
 ## TODO
 
-- [ ] How to first tab with all the information here
-- [ ] More tests
 - [?] intermediate code 
 - [?] final output
 
