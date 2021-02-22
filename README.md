@@ -6,6 +6,14 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 
 [Here!](https://lima1756.github.io/simple_compiler/)
 
+## TODO
+
+[ ] How to first tab with all the information here
+
+[?] intermediate code 
+
+[?] final output
+
 ## Tokens
 
 | definition | Terminal  |  Regular expression |
