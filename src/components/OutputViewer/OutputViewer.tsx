@@ -3,6 +3,7 @@ import './OutputViewer.scss'
 import { Tabs, Tab } from 'react-materialize';
 import TreeViewer from './Viewers/TreeViewer/TreeViewer';
 import ErrorViewer from './Viewers/ErrorViewer/ErrorViewer';
+import SymbolTableViewer from './Viewers/SymbolTableViewer/SymbolTableViewer';
 import Compiler from '../../compiler/Compiler';
 
 interface OutputViewerProps {
@@ -29,7 +30,7 @@ function OutputViewer(props: OutputViewerProps) {
               <ErrorViewer errorTable={errorTable!} />
             </Tab>
             <Tab title="Symbol table" disabled={errors}>
-              <pre>{prettyObject(symbolTable)}</pre>
+              <SymbolTableViewer symbolTable={symbolTable} />
             </Tab>
             <Tab title="Parse Tree JSON" disabled={errors}>
               {!errors && <pre>{prettyObject(parseTree)}</pre>}
