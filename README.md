@@ -26,7 +26,8 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 |  minus | minus | "-" |
 |  integer number | inum  | [0-9]+ |
 |  float number | fnum | [0-9]+.[0-9]+  |
-|  blank | blank | (" ")+  |
+|  blank | blank | (" "\|\t)+  |
+|  line break | newLine | ( \r\n \| \n \| \r )  |
 
 ## Syntax specification
 

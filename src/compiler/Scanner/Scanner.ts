@@ -50,7 +50,6 @@ class Scanner {
   }
 
   run(): Array<Token> {
-    let length = 0;
     let data = this.input;
     let error = false;
     let start = 0;
