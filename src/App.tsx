@@ -11,7 +11,7 @@ import Loader from './components/Loader/Loader';
 function App() {
   const [loading, setLoading] = React.useState(false);
   const [code, setCode] = React.useState<string>("fbiaa=5b=a+3.2pb");
-  const [compiler, setCompiler] = React.useState<Compiler>(new Compiler("fbiaa=5b=a+3.2pb"));
+  const [compiler, setCompiler] = React.useState<Compiler>();
 
   const exec = () => {
     setLoading(true);
