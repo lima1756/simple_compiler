@@ -102,15 +102,26 @@ class SemanticAnalysis {
     const tokenType = node.children[0].children[0].token!.type;
     const data = node.children[0].children[0].token!.data;
     const symbol = this.symbolTable.get(data)
-    if (op == SymbolType.float && (tokenType == TokenType.fnum || symbol?.type == SymbolType.float)) {
+    if (op == SymbolType.float && tokenType == TokenType.fnum) {
       return new AstNode(AstNodeType.fnum, node.children[0].children[0].token!.data)
     }
-    else if (op == SymbolType.int && (tokenType == TokenType.inum || symbol?.type == SymbolType.int)) {
+    else if (op == SymbolType.float && symbol?.type == SymbolType.float) {
+      return new AstNode(AstNodeType.id, node.children[0].children[0].token!.data)
+    }
+    else if (op == SymbolType.int && tokenType == TokenType.inum) {
       return new AstNode(AstNodeType.inum, node.children[0].children[0].token!.data)
     }
-    else if (op == SymbolType.float && (tokenType == TokenType.inum || symbol?.type == SymbolType.int)) {
+    else if (op == SymbolType.int && symbol?.type == SymbolType.int) {
+      return new AstNode(AstNodeType.id, node.children[0].children[0].token!.data)
+    }
+    else if (op == SymbolType.float && tokenType == TokenType.inum) {
       const parent = new AstNode(AstNodeType.int2float, "float")
       parent.children.push(new AstNode(AstNodeType.inum, node.children[0].children[0].token!.data))
+      return parent;
+    }
+    else if (op == SymbolType.float && symbol?.type == SymbolType.int) {
+      const parent = new AstNode(AstNodeType.int2float, "float")
+      parent.children.push(new AstNode(AstNodeType.id, node.children[0].children[0].token!.data))
       return parent;
     }
     this.errorTable.add(node.children[0].children[0].token!, "Float can't be converted to integer")
@@ -135,5 +146,5 @@ class SemanticAnalysis {
   }
 }
 
-export { AstNode }
+export { AstNode, AstNodeType }
 export default SemanticAnalysis;

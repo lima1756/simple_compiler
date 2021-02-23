@@ -68,6 +68,15 @@ function OutputViewer(props: OutputViewerProps) {
           <Tab title="AST Viewer" disabled={errors} >
             {!errors && <TreeViewer tree={ast} rate={200} />}
           </Tab>
+          <Tab title="Translation" disabled={errors} >
+            <h1>
+              Output program for &nbsp;
+              <a href="https://en.wikipedia.org/wiki/Dc_(computer_program)" target="_blank">
+                Desk calculator
+              </a>
+            </h1>
+            <code>{props.compiler.translator.output}</code>
+          </Tab>
         </Tabs>
       </div>
     </div>

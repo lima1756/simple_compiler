@@ -8,8 +8,8 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 
 ## TODO
 
-- [?] intermediate code 
-- [?] final output
+- Semantic analysis: check for value initialized before using it
+- [ ] final output [dc calculator](https://en.wikipedia.org/wiki/Dc_(computer_program))
 
 ## Tokens
 
