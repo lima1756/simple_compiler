@@ -9,7 +9,6 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 ## TODO
 
 - Semantic analysis: check for value initialized before using it
-- [ ] final output [dc calculator](https://en.wikipedia.org/wiki/Dc_(computer_program))
 
 ## Tokens
 
@@ -43,6 +42,10 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 ```
 fb ia a=5 b=a+3.2 pb
 ```
+
+## Output:
+
+The output is operations for the desk calculator, more information in [wikipedia](https://en.wikipedia.org/wiki/Dc_(computer_program))
 
 ## How it works
 
@@ -79,6 +82,10 @@ In the AST JSON tab, you can see the created json after the Semantic Analyzer th
 In the AST VIEWER tab, you can see the tree in a graphical way, you can drag around the canvas and zoom in and out.
 
 ![PARSE TREE VIEWER](https://github.com/lima1756/simple_compiler/blob/main/readme_images/astview.png)
+
+In case there are any errors on you code then it will show them on the errors tab and disable the other two tabs.
+
+![Translation](https://github.com/lima1756/simple_compiler/blob/main/readme_images/translation.png)
 
 In case there are any errors on you code then it will show them on the errors tab and disable the other two tabs.
 

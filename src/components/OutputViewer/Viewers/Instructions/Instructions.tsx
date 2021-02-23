@@ -75,6 +75,10 @@ In the AST VIEWER tab, you can see the tree in a graphical way, you can drag aro
 
 ![PARSE TREE VIEWER](https://raw.githubusercontent.com/lima1756/simple_compiler/main/readme_images/astview.png)
 
+The last tab is the code translated into Desk calculator language:
+
+![Translation](https://raw.githubusercontent.com/lima1756/simple_compiler/main/readme_images/translation.png)
+
 In case there are any errors on you code then it will show them on the errors tab and disable the other two tabs.
 
 ![Errors](https://raw.githubusercontent.com/lima1756/simple_compiler/main/readme_images/error.png)
