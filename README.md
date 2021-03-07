@@ -17,7 +17,7 @@ This is a simple compiler made for my compilers class at Tec de Monterrey
 | float declaration | floatdcl  | "f"  |
 | integer declaration | intdcl  |  "i" |
 | print | print  | "p"  |
-|  id | id|  [a-e]|[g-h]|[j-o]|[q-z]  |
+|  id | id|  [a-e]\|[g-h]\|[j-o]\|[q-z]  |
 |  assign | assign | "="  |
 |  plus | plus | "+" |
 |  minus | minus | "-" |
